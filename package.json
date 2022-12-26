@@ -1,6 +1,6 @@
 {
     "name": "improx",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Immutable Object Mapping",
     "main": "index.js",
     "scripts": {

@@ -1,4 +1,4 @@
-## impros
+## improx
 
 Use __immutable proxy__ of an object to create its variant.
 

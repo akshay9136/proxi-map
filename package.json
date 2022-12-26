@@ -1,8 +1,9 @@
 {
     "name": "improx",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Immutable Object Mapping",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
         "test": "jest --config jestconfig.json ./src",
         "build": "tsc --project tsconfig.build.json"

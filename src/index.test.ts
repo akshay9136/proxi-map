@@ -1,4 +1,4 @@
-import Imap from './index';
+import Impr from './index';
 import * as R from 'ramda';
 
 const data = {
@@ -20,7 +20,7 @@ const data = {
 };
 
 test('with value', () => {
-    const newData = Imap.of(data)
+    const newData = Impr.of(data)
         .category1
         .products[0].active(true)
         .unwrap();
@@ -34,7 +34,7 @@ test('with value', () => {
 });
 
 test('with function', () => {
-    const newData = Imap.of(data)
+    const newData = Impr.of(data)
         .category1
         .products(R.filter<any>(R.prop('active')))
         .unwrap();
@@ -47,7 +47,7 @@ test('with function', () => {
 });
 
 test('with same value', () => {
-    const newData = Imap.of(data)
+    const newData = Impr.of(data)
         .category1
         .products[0].active(false)
         .unwrap();

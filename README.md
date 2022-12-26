@@ -1,11 +1,13 @@
-## Immutable Object Mapping
+## impros
+
+Use __immutable proxy__ of an object to create its variant.
 
 ## Install
-`npm install i-map`
+`npm install improx`
 
 ## Usage
 ```javascript
-import Imap from 'i-map';
+import Impr from 'improx';
 
 const data = {
     category1: {
@@ -25,7 +27,7 @@ const data = {
     },
 };
 
-const newData = Imap.of(data)
+const newData = Impr.of(data)
     .category1
     .products[0].active(true)
     .unwrap();
@@ -51,11 +53,11 @@ console.log(
 `npm install ramda`
 
 ```javascript
-import Imap from 'i-map';
+import Impr from 'improx';
 import * as R from 'ramda';
 
 // remove inactive products from category1
-const newData = Imap.of(data)
+const newData = Impr.of(data)
     .category1
     .products(R.filter(R.prop('active')))
     .unwrap();

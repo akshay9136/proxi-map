@@ -22,7 +22,6 @@ const proxyGetter = (root: any, path: any[]) => (obj: any) => {
                     return { unwrap: () => root };
                 };
                 Object.defineProperties(applyReducer, {
-                    arguments: { configurable: true, writable: true },
                     length: { writable: true },
                     name: { writable: true },
                 });
@@ -36,11 +35,11 @@ const proxyGetter = (root: any, path: any[]) => (obj: any) => {
     });
 };
 
-export default class Imap {
+export default class Impr {
     constructor(obj: any) {
         return proxyGetter(obj, [])(obj);
     }
     static of(obj: any) {
-        return new Imap(obj) as any;
+        return new Impr(obj) as any;
     }
 }

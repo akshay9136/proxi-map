@@ -1,15 +1,15 @@
 {
-    "name": "i-map",
+    "name": "improx",
     "version": "0.0.0",
     "description": "Immutable Object Mapping",
     "main": "index.js",
     "scripts": {
-        "test": "jest --config jestconfig.json",
-        "build": "tsc"
+        "test": "jest --config jestconfig.json ./src",
+        "build": "tsc --project tsconfig.build.json"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/akshay9136/i-map.git"
+        "url": "https://github.com/akshay9136/improx.git"
     },
     "keywords": [
         "immutable",

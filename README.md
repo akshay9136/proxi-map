@@ -66,7 +66,7 @@ import * as R from 'ramda';
 const newData = Imap(data)
     .category1
     .products(R.filter(R.prop('active')))
-    // equivalent to: .products((arr) => arr.filter(obj => obj.active))
+    // equivalent to: (arr) => arr.filter(obj => obj.active)
     .unwrap();
 
 console.log(newData.category1);

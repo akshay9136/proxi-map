@@ -5,9 +5,9 @@
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "scripts": {
-        "test": "jest --config jestconfig.json ./src",
+        "test": "jest --config jestconfig.json",
         "build": "tsc --project tsconfig.build.json",
-        "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+        "coveralls": "jest --coverage --config jestconfig.json && cat ./coverage/lcov.info | coveralls"
     },
     "repository": {
         "type": "git",

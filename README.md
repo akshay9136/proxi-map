@@ -1,8 +1,8 @@
 ## proxi-map
 
 [![npm version](https://img.shields.io/npm/v/proxi-map)](https://www.npmjs.com/package/proxi-map)
-[![Build Status](https://travis-ci.com/akshay9136/proxi-map.svg?branch=main)](https://travis-ci.com/akshay9136/proxi-map)
-[![Coverage Status](https://coveralls.io/repos/github/akshay9136/proxi-map/badge.svg?branch=main)](https://coveralls.io/github/akshay9136/proxi-map?branch=main)
+[![Build Status](https://app.travis-ci.com/akshay9136/proxi-map.svg?branch=main)](https://app.travis-ci.com/akshay9136/proxi-map)
+[![Coverage Status](https://coveralls.io/repos/github/akshay9136/proxi-map/badge.svg)](https://coveralls.io/github/akshay9136/proxi-map)
 [![Known Vulnerabilities](https://snyk.io/test/npm/proxi-map/badge.svg)](https://snyk.io/test/npm/proxi-map)
 [![npm downloads/month](https://img.shields.io/npm/dm/proxi-map)](https://www.npmjs.com/package/proxi-map)
 

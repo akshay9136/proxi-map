@@ -54,7 +54,7 @@ console.log(
 );
 ```
 
-### Usage with [Ramda](https://www.npmjs.com/package/ramda)
+## Usage with [Ramda](https://www.npmjs.com/package/ramda)
 
 `npm install ramda`
 

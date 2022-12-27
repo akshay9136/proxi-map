@@ -35,11 +35,11 @@ const proxyGetter = (root: any, path: any[]) => (obj: any) => {
     });
 };
 
-export default class Impr {
+export default class Imap {
     constructor(obj: any) {
         return proxyGetter(obj, [])(obj);
     }
     static of(obj: any) {
-        return new Impr(obj) as any;
+        return new Imap(obj) as any;
     }
 }

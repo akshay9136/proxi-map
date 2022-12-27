@@ -1,13 +1,13 @@
-## improx
+## proxi-map
 
-Use __immutable proxy__ of an object to create its variant.
+A lightweight JavaScript library to create variants of an object by using its immutable proxy.
 
 ## Install
-`npm install improx`
+`npm install proxi-map`
 
 ## Usage
 ```javascript
-import Impr from 'improx';
+import Imap from 'proxi-map';
 
 const data = {
     category1: {
@@ -27,7 +27,7 @@ const data = {
     },
 };
 
-const newData = Impr.of(data)
+const newData = Imap.of(data)
     .category1
     .products[0].active(true)
     .unwrap();
@@ -53,11 +53,11 @@ console.log(
 `npm install ramda`
 
 ```javascript
-import Impr from 'improx';
+import Imap from 'proxi-map';
 import * as R from 'ramda';
 
 // remove inactive products from category1
-const newData = Impr.of(data)
+const newData = Imap.of(data)
     .category1
     .products(R.filter(R.prop('active')))
     .unwrap();

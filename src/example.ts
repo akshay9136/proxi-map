@@ -1,4 +1,4 @@
-import Impr from './index';
+import Imap from './index';
 import * as R from 'ramda';
 
 const data = {
@@ -19,7 +19,7 @@ const data = {
     },
 };
 
-const newData = Impr.of(data)
+const newData = Imap.of(data)
     .category1
     .products(R.filter<any>(R.prop('active')))
     .unwrap();

@@ -1,7 +1,7 @@
 {
-    "name": "improx",
-    "version": "0.0.2",
-    "description": "Immutable Object Mapping",
+    "name": "proxi-map",
+    "version": "0.0.0",
+    "description": "Immutable object mapping",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "scripts": {
@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/akshay9136/improx.git"
+        "url": "https://github.com/akshay9136/proxi-map.git"
     },
     "keywords": [
         "immutable",

@@ -1,6 +1,9 @@
 import { copyByPath, isFunction, isObject, shallowCopy } from './utils';
 
-const proxyGetter = (root: any, path: any[]) => (obj: any) => {
+type Key = string | number | symbol;
+type Obj = { [key: Key]: any };
+
+const proxyGetter = (root: Obj, path: Key[]) => (obj: Obj) => {
     return new Proxy(obj, {
         get(target, name, parent) {
             if (Reflect.has(target, name)) {
@@ -35,11 +38,6 @@ const proxyGetter = (root: any, path: any[]) => (obj: any) => {
     });
 };
 
-export default class Imap {
-    constructor(obj: any) {
-        return proxyGetter(obj, [])(obj);
-    }
-    static of(obj: any) {
-        return new Imap(obj) as any;
-    }
+export default function Imap(obj: Obj) {
+    return proxyGetter(obj, [])(obj);
 }

@@ -27,7 +27,7 @@ const data = {
     },
 };
 
-const newData = Imap.of(data)
+const newData = Imap(data)
     .category1
     .products[0].active(true)
     .unwrap();
@@ -48,7 +48,7 @@ console.log(
 );
 ```
 
-## Usage with [Ramda](https://www.npmjs.com/package/ramda)
+### Usage with [Ramda](https://www.npmjs.com/package/ramda)
 
 `npm install ramda`
 
@@ -57,9 +57,10 @@ import Imap from 'proxi-map';
 import * as R from 'ramda';
 
 // remove inactive products from category1
-const newData = Imap.of(data)
+const newData = Imap(data)
     .category1
     .products(R.filter(R.prop('active')))
+    // equivalent to: .products((arr) => arr.filter(obj => obj.active))
     .unwrap();
 
 console.log(newData.category1);

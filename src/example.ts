@@ -19,7 +19,7 @@ const data = {
     },
 };
 
-const newData = Imap.of(data)
+const newData = Imap(data)
     .category1
     .products(R.filter<any>(R.prop('active')))
     .unwrap();

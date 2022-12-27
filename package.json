@@ -6,7 +6,8 @@
     "types": "lib/index.d.ts",
     "scripts": {
         "test": "jest --config jestconfig.json ./src",
-        "build": "tsc --project tsconfig.build.json"
+        "build": "tsc --project tsconfig.build.json",
+        "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
     },
     "repository": {
         "type": "git",
@@ -17,13 +18,15 @@
         "nested",
         "object",
         "ramda",
-        "mutable"
+        "mutable",
+        "tree"
     ],
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "@types/jest": "^29.2.4",
         "@types/ramda": "^0.28.20",
+        "coveralls": "^3.1.1",
         "jest": "^29.3.1",
         "ramda": "^0.28.0",
         "ts-jest": "^29.0.3",

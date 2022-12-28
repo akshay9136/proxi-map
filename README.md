@@ -17,40 +17,42 @@ import Imap from 'proxi-map';
 
 const data = {
     category1: {
-        active: true,
+        activeProducts: 2,
         products: [
-            { name: 'product21', active: false },
-            { name: 'product22', active: true },
-            { name: 'product23', active: true },
+            { name: 'product11', active: false },
+            { name: 'product12', active: true },
+            { name: 'product13', active: true },
         ],
     },
     category2: {
-        active: true,
+        activeProducts: 2,
         products: [
-            { name: 'product31', active: true },
-            { name: 'product32', active: true },
+            { name: 'product21', active: true },
+            { name: 'product22', active: true },
         ],
     },
 };
 
 const newData = Imap(data)
     .category1
+    .activeProducts(3)
+    .backtrack(-1) // 1 step back
     .products[0].active(true)
     .unwrap();
 
 console.log(newData.category1);
 // {
-//     active: true,
+//     activeProducts: 3,
 //     products: [
-//       { name: 'product21', active: true },
-//       { name: 'product22', active: true },
-//       { name: 'product23', active: true }
+//       { name: 'product11', active: true },
+//       { name: 'product12', active: true },
+//       { name: 'product13', active: true }
 //     ]
 // }
 console.log(
-    data === newData, // false
-    data.category1 === newData.category1, // false
-    data.category2 === newData.category2 // true
+    data == newData, // false
+    data.category1 == newData.category1, // false
+    data.category2 == newData.category2 // true
 );
 ```
 

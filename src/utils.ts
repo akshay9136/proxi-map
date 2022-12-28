@@ -22,9 +22,14 @@ function copyByPath(obj: Obj, path: Key[]): Obj {
     }, obj);
 }
 
+function findByPath(obj: Obj, path: Key[]) {
+    return path.reduce((acc: Obj, key: Key) => acc[key], obj);
+}
+
 export {
     isObject,
     isFunction,
     shallowCopy,
-    copyByPath 
+    copyByPath,
+    findByPath,
 };

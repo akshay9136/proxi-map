@@ -73,7 +73,7 @@ const newData = Imap(data)
 
 console.log(newData.category1);
 // {
-//     active: true,
+//     activeProducts: 2,
 //     products: [
 //       { name: 'product22', active: true },
 //       { name: 'product23', active: true }
